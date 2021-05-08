@@ -39,8 +39,8 @@ def mavenHome = tool name: "maven3.6.3"
  mail bcc: 'devopstrainingblr@gmail.com', body: '''Build Over...
 
  Regards,
- Mithun Technologies,
- 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build Over...', to: 'devopstrainingblr@gmail.com'
+ Vedha Technologies,
+ 998092''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build Over...', to: 'devopstrainingblr@gmail.com'
  }
  
  
