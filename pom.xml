@@ -116,7 +116,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8</version>
+				<version>3.6</version>
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
@@ -125,13 +125,29 @@
 
 			
 			 <plugin>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
-            <configuration>
-                <fork>true</fork>
-                <executable>C:\Program Files\Java\jdk1.8.0_144\bin\javac.exe</executable>
-            </configuration>
-        </plugin>			
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.2.11.v20150529</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/maven-web-application</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+					<wtpversion>2.0</wtpversion>
+					<wtpContextName>maven-web-application</wtpContextName>
+				</configuration>
+			</plugin>
+			
 </plugins>
 	</build>
 	
